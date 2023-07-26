@@ -1,5 +1,6 @@
 // ** MUI Imports
 import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
 // ** Icons Imports
 import Poll from 'mdi-material-ui/Poll'
@@ -24,6 +25,11 @@ import LineChart from 'src/views/dashboard/LineChart'
 import StackedChart from 'src/views/dashboard/StackedChart'
 import DepositWithdraw from 'src/views/dashboard/DepositWithdraw'
 import SalesByCountries from 'src/views/dashboard/SalesByCountries'
+
+import CardImgTop from 'src/views/cards/CardImgTop'
+import CardWithCollapse from 'src/views/cards/CardWithCollapse'
+import CardUser from 'src/views/cards/CardUser'
+
 
 const Dashboard = () => {
   return (
@@ -78,9 +84,28 @@ const Dashboard = () => {
 <br/>
 <br/>
        <Grid item container spacing={3} direction="row" md={12}>
-        <Grid item xs={12} md={12}>
-                 <Table />
+               <Grid item xs={12}>
+          <Table />
         </Grid>
+       </Grid>
+<br/>
+<br/>
+       <Grid item container spacing={3} direction="row" md={12}>
+
+      <Grid item xs={12} sx={{ paddingBottom: 4 }}>
+        <Typography variant='h5'>Basic Cards</Typography>
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <CardImgTop />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <CardUser />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <CardWithCollapse />
+      </Grid>
+
+
         </Grid>
 
 <br/>
