@@ -6,6 +6,11 @@ import CardHeader from '@mui/material/CardHeader'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import MuiDivider, { DividerProps } from '@mui/material/Divider'
+import Button from '@mui/material/Button'
+import EmailOutline from 'mdi-material-ui/EmailOutline'
+import ChartLine from 'mdi-material-ui/ChartLine'
+import Twitter from 'mdi-material-ui/Twitter'
+
 
 interface DataType {
   logo: string
@@ -117,94 +122,60 @@ const DepositWithdraw = () => {
   return (
     <Card sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: ['column', 'column', 'row'] }}>
       <Box sx={{ width: '100%' }}>
-        <CardHeader
-          title='Deposit'
-          sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
-          action={<Typography variant='caption'>View All</Typography>}
-          titleTypographyProps={{
-            variant: 'h6',
-            sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
-          }}
-        />
         <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
-          {depositData.map((item: DataType, index: number) => {
-            return (
-              <Box
-                key={item.title}
-                sx={{ display: 'flex', alignItems: 'center', mb: index !== depositData.length - 1 ? 6 : 0 }}
-              >
-                <Box sx={{ minWidth: 38, display: 'flex', justifyContent: 'center' }}>
-                  <img src={item.logo} alt={item.title} width={item.logoWidth} height={item.logoHeight} />
-                </Box>
-                <Box
-                  sx={{
-                    ml: 4,
-                    width: '100%',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                  }}
-                >
-                  <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
-                    <Typography sx={{ fontWeight: 600, fontSize: '0.875rem' }}>{item.title}</Typography>
-                    <Typography variant='caption'>{item.subtitle}</Typography>
-                  </Box>
-                  <Typography variant='subtitle2' sx={{ fontWeight: 600, color: 'success.main' }}>
-                    {item.amount}
-                  </Typography>
-                </Box>
-              </Box>
-            )
-          })}
+                <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
+                      <EmailOutline sx={{ marginRight: 2 }} />
+
+        </Typography>
+                <Typography variant='h6'>50% decrease in direct mail volume</Typography>
+        <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
+          Issuers experienced a stark slowdown in direct mail volume this year.
+        </Typography>
+        <br/>
+        <Button size='small' variant='contained'>
+          Compare subject lines
+        </Button>
+
         </CardContent>
       </Box>
-
       <Divider flexItem />
 
       <Box sx={{ width: '100%' }}>
-        <CardHeader
-          title='Withdraw'
-          sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
-          action={<Typography variant='caption'>View All</Typography>}
-          titleTypographyProps={{
-            variant: 'h6',
-            sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
-          }}
-        />
         <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
-          {withdrawData.map((item: DataType, index: number) => {
-            return (
-              <Box
-                key={item.title}
-                sx={{ display: 'flex', alignItems: 'center', mb: index !== depositData.length - 1 ? 6 : 0 }}
-              >
-                <Box sx={{ minWidth: 36, display: 'flex', justifyContent: 'center' }}>
-                  <img src={item.logo} alt={item.title} width={item.logoWidth} height={item.logoHeight} />
-                </Box>
-                <Box
-                  sx={{
-                    ml: 4,
-                    width: '100%',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                  }}
-                >
-                  <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
-                    <Typography sx={{ fontWeight: 600, fontSize: '0.875rem' }}>{item.title}</Typography>
-                    <Typography variant='caption'>{item.subtitle}</Typography>
-                  </Box>
-                  <Typography variant='subtitle2' sx={{ fontWeight: 600, color: 'error.main' }}>
-                    {item.amount}
-                  </Typography>
-                </Box>
-              </Box>
-            )
-          })}
+                <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
+                      <ChartLine sx={{ marginRight: 2 }} />
+        </Typography>
+                <Typography variant='h6'>New REI Co-Op Capital One Credit Card</Typography>
+        <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
+          CapOne launched a new card in partnership with REI encouraging outdoor activities.
+        </Typography>
+        <br/>
+        <Button size='small' variant='contained'>
+          Compare subject lines
+        </Button>
+
         </CardContent>
       </Box>
+
+       <Divider flexItem />
+
+      <Box sx={{ width: '100%' }}>
+        <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
+                <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
+                      <Twitter sx={{ marginRight: 2 }} />
+        </Typography>
+                <Typography variant='h6'>Halle Bailey for Chase Saphire</Typography>
+        <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
+          Chase recently launched a new campaign with celebrity Halle Bailey to prepare for their deal.
+        </Typography>
+        <br/>
+        <Button size='small' variant='contained'>
+          Compare subject lines
+        </Button>
+
+        </CardContent>
+      </Box>
+
     </Card>
   )
 }

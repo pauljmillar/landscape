@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid'
 
 // ** Icons Imports
 import Poll from 'mdi-material-ui/Poll'
+import Twitter from 'mdi-material-ui/Twitter'
 import CurrencyUsd from 'mdi-material-ui/CurrencyUsd'
 import HelpCircleOutline from 'mdi-material-ui/HelpCircleOutline'
 import BriefcaseVariantOutline from 'mdi-material-ui/BriefcaseVariantOutline'
@@ -19,25 +20,119 @@ import Trophy from 'src/views/dashboard/Trophy'
 import TotalEarning from 'src/views/dashboard/TotalEarning'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import WeeklyOverview from 'src/views/dashboard/WeeklyOverview'
+import LineChart from 'src/views/dashboard/LineChart'
+import StackedChart from 'src/views/dashboard/StackedChart'
 import DepositWithdraw from 'src/views/dashboard/DepositWithdraw'
 import SalesByCountries from 'src/views/dashboard/SalesByCountries'
 
 const Dashboard = () => {
   return (
     <ApexChartWrapper>
-      <Grid container spacing={6}>
-        <Grid item xs={12} md={4}>
+
+<br/>
+<h1>What's Happening In Co-Branded Credit Cards?</h1>
+<br/>
+
+       <Grid container spacing={6} >
+       <Grid item container spacing={3} direction="column" md={3}>
+        <Grid item xs={12} md={3}>
           <Trophy />
         </Grid>
-        <Grid item xs={12} md={8}>
-          <StatisticsCard />
+        <Grid item xs={12} md={3}>
+          <Trophy />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Trophy />
+        </Grid>
+       </Grid>
+       <Grid item container spacing={6} direction="column"  md={7}>
+        <Grid item xs={12} md={4}>
+          <DepositWithdraw />
+        </Grid>
+        <Grid item container spacing={6} direction="row"  md={7}>
+            <Grid item xs={12} md={8} lg={6}>
+              <WeeklyOverview />
+            </Grid>
+            <Grid item xs={12} md={8} lg={6}>
+              <TotalEarning />
+            </Grid>
+        </Grid>
+       </Grid>
+      <Grid item container spacing={3} direction="column"  md={2}>
+          <Grid item xs={12} md={3}>
+             <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
+          </Grid>
+          <Grid item xs={12} md={3}>
+             <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
+          </Grid>
+          <Grid item xs={12} md={3}>
+             <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
+          </Grid>
+           <Grid item xs={12} md={3}>
+             <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
+          </Grid>
+       </Grid>
+       </Grid>
+<br/>
+<br/>
+<br/>
+<br/>
+       <Grid item container spacing={3} direction="row" md={12}>
+        <Grid item xs={12} md={12}>
+                 <Table />
+        </Grid>
+        </Grid>
+
+<br/>
+<br/>
+<br/>
+       <Grid container spacing={6}>
+        <Grid item xs={12} md={3}>
+          <Trophy />
+        </Grid>
+        <Grid item xs={12} md={7}>
+          <DepositWithdraw />
+        </Grid>
+        <Grid item xs={6} md={2}>
+              <CardStatisticsVerticalComponent
+                stats='$25.6k'
+                icon={<Twitter />}
+                trendNumber='+42%'
+                title='Capital One'
+                subtitle='Financial Services'
+              />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Trophy />
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <WeeklyOverview />
+          <LineChart />
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+         <Grid item xs={12} md={6} lg={4}>
+          <StackedChart />
+        </Grid>
+        <Grid item xs={12} md={6} lg={3}>
           <TotalEarning />
         </Grid>
+        <Grid item xs={6} md={2}>
+              <CardStatisticsVerticalComponent
+                stats='$25.6k'
+                icon={<Poll />}
+                trendNumber='+42%'
+                title='Capital One'
+                subtitle='Financial Services'
+              />
+            </Grid>
+            <Grid item xs={6} md={2}>
+              <CardStatisticsVerticalComponent
+                stats='$25.6k'
+                icon={<Poll />}
+                color='success'
+                trendNumber='+42%'
+                title='Capital One'
+                subtitle='Financial Services'
+              />
+            </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <Grid container spacing={6}>
             <Grid item xs={6}>
@@ -46,18 +141,18 @@ const Dashboard = () => {
                 icon={<Poll />}
                 color='success'
                 trendNumber='+42%'
-                title='Total Profit'
-                subtitle='Weekly Profit'
+                title='Capital One'
+                subtitle='Financial Services'
               />
             </Grid>
             <Grid item xs={6}>
               <CardStatisticsVerticalComponent
                 stats='$78'
-                title='Refunds'
+                title='Chase'
                 trend='negative'
                 color='secondary'
                 trendNumber='-15%'
-                subtitle='Past Month'
+                subtitle='Financial Services'
                 icon={<CurrencyUsd />}
               />
             </Grid>
@@ -88,12 +183,13 @@ const Dashboard = () => {
           <SalesByCountries />
         </Grid>
         <Grid item xs={12} md={12} lg={8}>
-          <DepositWithdraw />
+          <StatisticsCard />
         </Grid>
         <Grid item xs={12}>
           <Table />
         </Grid>
       </Grid>
+
     </ApexChartWrapper>
   )
 }

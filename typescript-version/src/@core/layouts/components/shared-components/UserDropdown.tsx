@@ -106,7 +106,13 @@ const UserDropdown = () => {
           </Box>
         </Box>
         <Divider sx={{ mt: 0, mb: 1 }} />
-        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose()}>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/')}>
+          <Box sx={styles}>
+            <EmailOutline sx={{ marginRight: 2 }} />
+            Dashboard
+          </Box>
+        </MenuItem>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/account-settings')}>
           <Box sx={styles}>
             <AccountOutline sx={{ marginRight: 2 }} />
             Profile
@@ -141,6 +147,43 @@ const UserDropdown = () => {
           <Box sx={styles}>
             <HelpCircleOutline sx={{ marginRight: 2 }} />
             FAQ
+          </Box>
+        </MenuItem>
+        <Divider />
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/register')}>
+          <Box sx={styles}>
+            <HelpCircleOutline sx={{ marginRight: 2 }} />
+            Register
+          </Box>
+        </MenuItem>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/typography')}>
+          <Box sx={styles}>
+            <HelpCircleOutline sx={{ marginRight: 2 }} />
+            Typography
+          </Box>
+        </MenuItem>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/icons')}>
+          <Box sx={styles}>
+            <HelpCircleOutline sx={{ marginRight: 2 }} />
+            Icons
+          </Box>
+        </MenuItem>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/cards')}>
+          <Box sx={styles}>
+            <HelpCircleOutline sx={{ marginRight: 2 }} />
+            Cards
+          </Box>
+        </MenuItem>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/tables')}>
+          <Box sx={styles}>
+            <HelpCircleOutline sx={{ marginRight: 2 }} />
+            Tables
+          </Box>
+        </MenuItem>
+        <MenuItem sx={{ p: 0 }} onClick={() => handleDropdownClose('/form-layouts')}>
+          <Box sx={styles}>
+            <HelpCircleOutline sx={{ marginRight: 2 }} />
+            Form Layouts
           </Box>
         </MenuItem>
         <Divider />

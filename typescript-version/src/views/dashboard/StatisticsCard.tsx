@@ -30,12 +30,6 @@ interface DataType {
 
 const salesData: DataType[] = [
   {
-    stats: '245k',
-    title: 'Sales',
-    color: 'primary',
-    icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
-  },
-  {
     stats: '12.5k',
     title: 'Customers',
     color: 'success',
@@ -57,7 +51,7 @@ const salesData: DataType[] = [
 
 const renderStats = () => {
   return salesData.map((item: DataType, index: number) => (
-    <Grid item xs={12} sm={3} key={index}>
+    <Grid item xs={12} sm={4} key={index}>
       <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
         <Avatar
           variant='rounded'
