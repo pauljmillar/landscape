@@ -29,6 +29,10 @@ import SalesByCountries from 'src/views/dashboard/SalesByCountries'
 import CardImgTop from 'src/views/cards/CardImgTop'
 import CardWithCollapse from 'src/views/cards/CardWithCollapse'
 import CardUser from 'src/views/cards/CardUser'
+import CardTwitter from 'src/views/cards/CardTwitter'
+import CardFacebook from 'src/views/cards/CardFacebook'
+import CardLinkedIn from 'src/views/cards/CardLinkedIn'
+import TableStickyHeader from 'src/views/tables/TableStickyHeader'
 
 
 const Dashboard = () => {
@@ -65,16 +69,16 @@ const Dashboard = () => {
         </Grid>
        </Grid>
       <Grid item container spacing={3} direction="column"  md={2}>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={2} md={3}>
              <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={2} md={2}>
+            <CardFacebook/>
+         </Grid>
+          <Grid item xs={2} md={3}>
              <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
           </Grid>
-          <Grid item xs={12} md={3}>
-             <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
-          </Grid>
-           <Grid item xs={12} md={3}>
+           <Grid item xs={2} md={3}>
              <CardStatisticsVerticalComponent stats='$25.6k' icon={<Poll />} trendNumber='+42%' title='Capital One' subtitle='Financial Services' />
           </Grid>
        </Grid>
@@ -85,7 +89,7 @@ const Dashboard = () => {
 <br/>
        <Grid item container spacing={3} direction="row" md={12}>
                <Grid item xs={12}>
-          <Table />
+          <TableStickyHeader   />
         </Grid>
        </Grid>
 <br/>
