@@ -10,7 +10,6 @@ import CardContent from '@mui/material/CardContent'
 // ** Icons Imports
 import Heart from 'mdi-material-ui/Heart'
 import Facebook from 'mdi-material-ui/Facebook'
-import BarChart from 'mdi-material-ui/BarChart'
 import ShareVariant from 'mdi-material-ui/ShareVariant'
 
 const CardFacebook = () => {
@@ -32,7 +31,7 @@ const CardFacebook = () => {
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: 'flex', alignItems: 'center', mr: 3.5 }}>
               <Typography variant='body2' sx={{ color: 'common.white' }}>
-                see more >>
+                see more &gt;&gt;
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>

@@ -29,9 +29,7 @@ import SalesByCountries from 'src/views/dashboard/SalesByCountries'
 import CardImgTop from 'src/views/cards/CardImgTop'
 import CardWithCollapse from 'src/views/cards/CardWithCollapse'
 import CardUser from 'src/views/cards/CardUser'
-import CardTwitter from 'src/views/cards/CardTwitter'
 import CardFacebook from 'src/views/cards/CardFacebook'
-import CardLinkedIn from 'src/views/cards/CardLinkedIn'
 import TableStickyHeader from 'src/views/tables/TableStickyHeader'
 
 
