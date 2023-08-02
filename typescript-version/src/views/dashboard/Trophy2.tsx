@@ -21,7 +21,7 @@ const TrophyImg = styled('img')({
   position: 'absolute'
 })
 
-const Trophy = () => {
+const Trophy2 = () => {
   // ** Hook
   const theme = useTheme()
 
@@ -30,12 +30,12 @@ const Trophy = () => {
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
-        <Typography variant='h6'>50% decrease in direct mail volume</Typography>
+        <Typography variant='h6'>47% decrease in direct spend</Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          Issuers experienced a stark slowdown in direct mail volume this year.
+          Issuers have decreased direct mail spend over the last 12 months.
         </Typography>
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
-          19.8M
+          $33.8M
         </Typography>
         <Button size='small' variant='contained'>
           View Stats
@@ -46,4 +46,4 @@ const Trophy = () => {
   )
 }
 
-export default Trophy
+export default Trophy2
