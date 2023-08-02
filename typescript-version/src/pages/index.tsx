@@ -28,7 +28,6 @@ import SalesByCountries from 'src/views/dashboard/SalesByCountries'
 
 import CardImgTop from 'src/views/cards/CardImgTop'
 import CardWithCollapse from 'src/views/cards/CardWithCollapse'
-import CardUser from 'src/views/cards/CardUser'
 import CardFacebook from 'src/views/cards/CardFacebook'
 import TableStickyHeader from 'src/views/tables/TableStickyHeader'
 
@@ -154,16 +153,19 @@ const Dashboard = () => {
       <Grid item xs={12} sx={{ paddingBottom: 4 }}>
         <Typography variant='h5'>Top Insight for Marketing Managers</Typography>
       </Grid>
-      <Grid item xs={12} sm={6} md={4}>
+      <Grid item xs={12} sm={6} md={3}>
         <CardImgTop />
       </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <CardUser />
+      <Grid item xs={12} sm={6} md={3}>
+        <CardImgTop />
       </Grid>
-      <Grid item xs={12} sm={6} md={4}>
+      <Grid item xs={12} sm={6} md={3}>
         <CardWithCollapse />
       </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <CardWithCollapse />
       </Grid>
+   </Grid>
 
 <br/>
 <br/>
